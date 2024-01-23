@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include <vector>
 
 namespace swn {
 	class string : public std::string
@@ -21,7 +22,7 @@ namespace swn {
 		/// 文字列の長さを返す
 		/// </summary>
 		/// <returns>文字列の長さ</returns>
-		size_t length() { return this->size(); }
+		size_t length() const { return this->size(); }
 
 		/// <summary>
 		/// 改行を含めた文字データを取得する
@@ -34,5 +35,7 @@ namespace swn {
 		string padEnd(int maxLength, const string& fillString);
 
 		string trim();
+
+		std::vector<string> split(const string& splitter);
 	};
 }

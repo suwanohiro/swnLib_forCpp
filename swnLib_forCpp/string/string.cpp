@@ -46,3 +46,21 @@ string swn::string::trim()
     // Œ‹‰Ê‚ğ•Ô‚·
     return this->substr(left_trimmed, right_trimmed - left_trimmed + 1);
 }
+
+std::vector<string> swn::string::split(const string& splitter)
+{
+    std::vector<string> result;
+
+    size_t start = 0;
+    size_t end = this->find(splitter);
+
+    while (end != std::string::npos) {
+        result.push_back(this->substr(start, end - start));
+        start = end + splitter.length();
+        end = this->find(splitter, start);
+    }
+
+    result.push_back(this->substr(start));
+
+    return result;
+}

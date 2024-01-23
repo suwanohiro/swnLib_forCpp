@@ -1,0 +1,37 @@
+﻿  main.cpp
+C:\GitFork\swnLib_forCpp\main.cpp(11,5): error C2679: 二項演算子 '=': 型 'std::vector<T,std::allocator<T>>' の右オペランドを扱う演算子が見つかりません (または変換できません)。
+C:\GitFork\swnLib_forCpp\main.cpp(11,5): error C2679:         with
+C:\GitFork\swnLib_forCpp\main.cpp(11,5): error C2679:         [
+C:\GitFork\swnLib_forCpp\main.cpp(11,5): error C2679:             T=int
+C:\GitFork\swnLib_forCpp\main.cpp(11,5): error C2679:         ]
+  C:\GitFork\swnLib_forCpp\swnLib_forCpp\vector\vector.hpp(22,1):
+  'swn::vector<int> &swn::vector<int>::operator =(swn::vector<int> &&)' の可能性があります
+  C:\GitFork\swnLib_forCpp\swnLib_forCpp\vector\vector.hpp(22,1):
+  または 'swn::vector<int> &swn::vector<int>::operator =(const swn::vector<int> &)'
+  C:\GitFork\swnLib_forCpp\main.cpp(11,5):
+  引数リスト '(swn::vector<int>, std::vector<T,std::allocator<T>>)' を一致させようとしているとき
+          with
+          [
+              T=int
+          ]
+  
+  vector.cpp
+C:\GitFork\swnLib_forCpp\swnLib_forCpp\vector\vector.hpp(19,17): error C2039: 'string': 'std' のメンバーではありません
+  (ソース ファイル 'swnLib_forCpp/vector/vector.cpp' をコンパイルしています)
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\vector(25,1):
+  'std' の宣言を確認してください
+  C:\GitFork\swnLib_forCpp\swnLib_forCpp\vector\vector.hpp(19,17):
+  テンプレートインスタンス化コンテキスト (最初に最も古いもの) は
+  	C:\GitFork\swnLib_forCpp\swnLib_forCpp\vector\vector.hpp(22,3):
+  	コンパイル対象の クラス テンプレート インスタンス化 'swn::vector<T>' のリファレンスを確認してください
+  
+C:\GitFork\swnLib_forCpp\swnLib_forCpp\vector\vector.hpp(19,17): error C2833: 'operator string' は演算子または型指定子のどちらでもありません。
+  (ソース ファイル 'swnLib_forCpp/vector/vector.cpp' をコンパイルしています)
+  
+C:\GitFork\swnLib_forCpp\swnLib_forCpp\vector\vector.hpp(19,1): error C2059: 構文エラー: 'newline'
+  (ソース ファイル 'swnLib_forCpp/vector/vector.cpp' をコンパイルしています)
+  
+C:\GitFork\swnLib_forCpp\swnLib_forCpp\vector\vector.hpp(19,32): error C2334: '{' の前に予期しないトークンがありました。関数の本体は無視されます
+  (ソース ファイル 'swnLib_forCpp/vector/vector.cpp' をコンパイルしています)
+  
+  コードを生成中...

@@ -16,15 +16,24 @@
     <Filter Include="swnLib_forCpp">
       <UniqueIdentifier>{7cab6bf2-edfe-42ed-9c89-5c078ab49eab}</UniqueIdentifier>
     </Filter>
+    <Filter Include="swnLib_forCpp\string">
+      <UniqueIdentifier>{98bfe4f3-33b6-46a2-8e60-9d6b68625589}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
+    <ClCompile Include="swnLib_forCpp\string\string.cpp">
+      <Filter>swnLib_forCpp\string</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="swnLib_forCpp\swnLib_forCpp.hpp">
       <Filter>swnLib_forCpp</Filter>
+    </ClInclude>
+    <ClInclude Include="swnLib_forCpp\string\string.hpp">
+      <Filter>swnLib_forCpp\string</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

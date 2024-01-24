@@ -2,12 +2,13 @@
 
 #include <string>
 #include <vector>
+#include <regex>
 
 namespace swn {
 	class string : public std::string
 	{
 	private:
-		string __createPadding(int maxLength, const string& fillString);
+		string __createPadding(int maxLength, const string& fillString) const;
 
 	public:
 		string(): std::string() {}
@@ -21,21 +22,53 @@ namespace swn {
 		/// <summary>
 		/// 文字列の長さを返す
 		/// </summary>
-		/// <returns>文字列の長さ</returns>
 		size_t length() const { return this->size(); }
 
 		/// <summary>
 		/// 改行を含めた文字データを取得する
 		/// </summary>
-		/// <returns>改行を含めた文字データ</returns>
-		string addLine() { return *this + "\n"; }
+		string addLine() const { return *this + "\n"; }
 
-		string padStart(int maxLength, const string& fillString);
+		/// <summary>
+		/// 先頭に文字列を追加して指定した長さに変更する
+		/// </summary>
+		/// <param name="maxLength">文字列の長さ</param>
+		/// <param name="fillString">埋め込む文字列</param>
+		string padStart(int maxLength, const string& fillString) const;
 
-		string padEnd(int maxLength, const string& fillString);
+		/// <summary>
+		/// 末尾に文字列を追加して指定した長さに変更する
+		/// </summary>
+		/// <param name="maxLength">文字列の長さ</param>
+		/// <param name="fillString">埋め込む文字列</param>
+		string padEnd(int maxLength, const string& fillString) const;
 
-		string trim();
+		/// <summary>
+		/// 文字列の前後の空白を削除する
+		/// </summary>
+		/// <returns></returns>
+		string trim() const;
 
-		std::vector<string> split(const string& splitter);
+		std::vector<string> split(const string& splitter, int limit = 0) const;
+
+		/// <summary>
+		/// 文字列を置換する
+		/// </summary>
+		/// <param name="searchValue">置換対象文字列</param>
+		/// <param name="replaceValue">置換文字列</param>
+		/// <param name="isAll">置換対象全てを置換するか</param>
+		string replace(const string& searchValue, const string& replaceValue, bool isAll = false) const;
+
+		operator const char* () {
+			return c_str();
+		}
+
+		operator char* () {
+			return const_cast<char*>(c_str());
+		}
+
+		operator std::string() {
+			return *this;
+		}
 	};
 }
